@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+  
+</head>
+<body>  
+   <script>
+const inputChoice = prompt("let's start the game, enter your guess", );
+function getComputerChoice (choice) {
+    let choices = ["rock","paper", "scissor"];
+    let randomValue = Math.floor(Math.random()*choices.length - 1);
+    return choices[randomValue];
+}
+
+let randomChoice = getComputerChoice();
+console.log(randomChoice);
+console.log(randomChoice);
+console.log(randomChoice);
+
+   // Create a variable that asks the user for a value.
+   // Start the game with a function that returns a random value from "rock", "paper" or "Scissor"
+   // after that ask the user for an input 
+   // console random string from the computer
+   // If user input is == random string you should output "play again" and continue
+   // If user input is == rock and random string == scissor, then output "You win" and quit
+   // If user input is == rock and random string == paper, then output "you lose!" and quit
+   // If user input is == paper and random string == rock, then output "you, win" and quit
+   // If user input is == paper and random string == scissor, then output "you lose" and quit
+   // If user input is ==  scissor and random string == rock, then output "you lose" and quit
+   // If user input is ==  scissor and random string == paper, then out "you win" and quit
+</script>
+
+</body>
+</html  
