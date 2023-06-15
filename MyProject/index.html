@@ -8,18 +8,18 @@
 </head>
 <body>  
    <script>
-const inputChoice = prompt("let's start the game, enter your guess", );
-function getComputerChoice (choice) {
+//const inputChoice = prompt("let's start the game, enter your guess", );
+function getComputerChoice () {
     let choices = ["rock","paper", "scissor"];
-    let randomValue = Math.floor(Math.random()*choices.length - 1);
+    let randomValue = Math.floor(Math.random()*choices.length);
     return choices[randomValue];
 }
+function playRound (playerSelection, computerSelection) {
+    
+}
 
-let randomChoice = getComputerChoice();
-console.log(randomChoice);
-console.log(randomChoice);
-console.log(randomChoice);
 
+   // a fucnti
    // Create a variable that asks the user for a value.
    // Start the game with a function that returns a random value from "rock", "paper" or "Scissor"
    // after that ask the user for an input 
