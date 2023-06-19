@@ -5,13 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-<link rel="stylesheet" href="project.js">
+    <link rel="stylesheet" href="project.js">
 </head>
 
 <body>
     <script>
-        
-        //const inputChoice = prompt("let's start the game, enter your guess", );
         function getComputerChoice() {
             let choices = ["rock", "paper", "scissor"];
             // select a random value from choices
@@ -36,11 +34,24 @@
             } else {
                 return "The value is  invalid";
             }
+
         }
-        const playerSelection = prompt("What is your guese?");
-        const computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection,computerSelection));
-        
+        function game() {
+            playRound();
+            // play the game 5 times and give the results. (loop the playround function);
+            for (let i = 0; i <= 4; i++) {
+                const playerSelection = prompt("What is your guese?");
+                const computerSelection = getComputerChoice();
+                console.log((playRound(playerSelection, computerSelection)));
+            }
+            
+        }
+        const newValue = game(playRound);
+        console.log(newValue);
+
+
+
+
    // Create a variable that asks the user for a value.
    // Start the game with a function that returns a random value from "rock", "paper" or "Scissor"
    // after that ask the user for an input
