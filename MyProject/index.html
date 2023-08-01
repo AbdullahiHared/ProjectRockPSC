@@ -6,65 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="project.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <script>
-        function getComputerChoice() {
-            let choices = ["rock", "paper", "scissor"];
-            // select a random value from choices
-            let randomValue = Math.floor(Math.random() * choices.length);
-            return choices[randomValue];
-        }
-        function playRound(playerSelection, computerSelection) {
-            if (playerSelection == computerSelection) {
-                return "Equal points";
-            } else if (playerSelection === "rock" && computerSelection === "scissor") {
-                return "you win, Rock beats Scissor";
-            } else if (playerSelection === "rock" && computerSelection === "paper") {
-                return "You lose! Paper beats Rock";
-            } else if (playerSelection === "paper" && computerSelection === "rock") {
-                return "You win!, Paper beats Rock";
-            } else if (playerSelection === "paper" && computerSelection === "scissor") {
-                return "You lose! Scissor beats paper";
-            } else if (playerSelection === "scissor" && computerSelection === "rock") {
-                return "You lose! Rock beats Scissors";
-            } else if (playerSelection === "scissor" && computerSelection === "paper") {
-                return "You win, Scissor beats Paper";
-            } else {
-                return "The value is  invalid";
-            }
+<body
+    <div class="choices">
+    <button class="rock">Rock</button>
+    <button class="paper">Paper</button>
+    <button class="scissor">Scissor</button>
+    </div>
+    <div class="result"></div>
+    <style>
+        body {
+            padding:0;
+            margin:0;
+            box-sizing:border-box;
+            background-color:rgb(74, 74, 100);
+            font-family:'lato', sans-serif;
 
         }
-        function game() {
-            playRound();
-            // play the game 5 times and give the results. (loop the playround function);
-            for (let i = 0; i <= 4; i++) {
-                const playerSelection = prompt("What is your guese?");
-                const computerSelection = getComputerChoice();
-                console.log((playRound(playerSelection, computerSelection)));
-            }
+        .choices {
+            display:flex;
+            justify-content:center;
+            flex-direction:column;
+            align-items:center;
+            padding:10px 20px;
+            margin:300px;
+            gap:20px;
             
         }
-        const newValue = game(playRound);
-        console.log(newValue);
+        .rock{
+            width:400px;
+            height:50px;
+            font-size:2rem;
+            border:2px solid white;
+            border-radius:5px;
+            box-shadow:0 0 10px white;
+            align-items:center;
+            cursor: pointer;
+            padding:3px 20px;
+        }
+        .paper {
+            width:400px;
+            height:50px;
+            font-size:2rem;
+            border:2px solid white;
+            border-radius:5px;
+            box-shadow:0 0 10px white;
+            cursor: pointer;
+            padding:3px 13px;
+        }
+        .scissor {
+            width:200px;
+            height:50px;
+            font-size:2rem;
+            border:2px solid white;
+            border-radius:5px;
+            box-shadow:0 0 10px pink;
+            cursor: pointer;
+        }
+        .result {
+            display:flex;
+            color:white;
+            background-color:transparent;
+            border:2px solid gray;
+            align-items:center;
+            text-align:center;
+            border-radius:5px;
+            width:350px;
+            height:80px;
+            font-size:2rem;
+            padding:4px;
+            
+        }
 
-
-
-
-   // Create a variable that asks the user for a value.
-   // Start the game with a function that returns a random value from "rock", "paper" or "Scissor"
-   // after that ask the user for an input
-   // console random string from the computer
-   // If user input is == random string you should output "play again" and continue
-   // If user input is == rock and random string == scissor, then output "You win" and quit
-   // If user input is == rock and random string == paper, then output "you lose!" and quit
-   // If user input is == paper and random string == rock, then output "you, win" and quit
-   // If user input is == paper and random string == scissor, then output "you lose" and quit
-   // If user input is ==  scissor and random string == rock, then output "you lose" and quit
-   // If user input is ==  scissor and random string == paper, then out "you win" and quit
+    </style>
+    <script src="project.js">
     </script>
-
 </body>
-
 </html
