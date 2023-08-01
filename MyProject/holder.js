@@ -1,7 +1,6 @@
 
 function getComputerChoice() {
     let choices = ["rock", "paper", "scissor"];
-    let choicesUpper = choices.toUpperCase();
     // select a random value from choices
     let randomValue = Math.floor(Math.random() * choices.length);
     return choices[randomValue];
@@ -54,7 +53,7 @@ function resultOutput() {
 /* function game() {
     playRound();
     // play the game 5 times and show the results. (loop the playRound function);
-    for (let i = 0; i <= 4; i++) {
+       for (let i = 0; i <= 4; i++) {
         const playerSelection = prompt("What is your guese?");
         const computerSelection = getComputerChoice();
         console.log((playRound(playerSelection, computerSelection)));
