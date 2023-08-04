@@ -2,7 +2,8 @@ body {
     padding:0;
     margin:0;
     box-sizing:border-box;
-    background-color:rgb(74, 74, 100);
+    background-color:black;
+    height:100vh;
     font-family:'lato', sans-serif;
 
 }
@@ -38,7 +39,7 @@ body {
     padding:3px 13px;
 }
 .scissor {
-    width:200px;
+    width:400px;
     height:50px;
     font-size:2rem;
     border:2px solid white;
@@ -49,14 +50,54 @@ body {
 .result {
     display:flex;
     color:white;
-    background-color:transparent;
-    border:2px solid gray;
+    justify-content:center;
     align-items:center;
-    text-align:center;
-    border-radius:5px;
-    width:350px;
+    width:370px;
     height:80px;
     font-size:2rem;
-    padding:4px;
+    border-radius:5px;
+    border:2px white solid;
+    text-align:center;
+    padding:15px 10px;
+    text-transform:uppercase;
+}
+.playerPoints, .computerPoints{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+    text-align:center;
+    color:white;
+    font-size:1.5rem;
+    text-transform:uppercase;
     
+}
+.rock:hover {
+   background-color:greenyellow;
+   color:black;
+   border:none;
+   
+}
+.paper:hover {
+    color:white;
+    background-color:greenyellow;
+}
+img:hover {
+    color:white;
+    filter:contrast(50%);
+}
+.scissor:hover {
+    background-color:greenyellow;
+    color:black;
+    border:none;
+}
+#resetBtn {
+    width:100px;
+    height:50px;
+    font-size:1rem;
+    border:none;
+    border-radius:5px;
+}
+#resetBtn:hover {
+    color:white;
+    background-color:red;
 }
